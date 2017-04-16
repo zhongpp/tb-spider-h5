@@ -1,0 +1,35 @@
+{
+
+	"manifest_version":2,
+	"name":"Coke",
+	"description":"Collection tb data",
+	"version":"1.0.0",
+
+
+	"permissions":[
+		"https://*.baidu.com/",
+		"cookies",
+		"tabs",
+		"https://detailskip.taobao.com/"
+	],
+
+	"background":{
+
+		"scripts":["js/jquery-3.2.0.min.js","js/broswer/bg.js"]
+	},
+
+	// "browser_action":{
+	// 	"default_icon":"icon.png",
+	// 	"default_popup":"popup.html",
+	// 	"default_title":"COKE BOOK"
+	// },
+	"content_scripts": [
+	    {
+	      "matches": ["https://sycm.taobao.com/*"],
+	      "js": ["js/jquery-3.2.0.min.js", "js/content/index.js","js/content/detail.js"]
+	    }
+  	]
+
+
+
+}
